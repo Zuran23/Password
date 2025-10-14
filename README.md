@@ -1,1 +1,2 @@
-# Project Requirments: Password Validator 
+# Write pseudocode in the README.md file.
+## 
