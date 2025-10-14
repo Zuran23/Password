@@ -1,4 +1,4 @@
-# Project Requirments: Password Validator 
+# Project Requirements: Password Validator 
 # Pseudocode:
 ## Print: “enter your password”
 
