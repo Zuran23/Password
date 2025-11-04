@@ -1,4 +1,4 @@
-FROM: amazoncorretto:latest
+FROM amazoncorretto:latest
 WORKDIR /app
 COPY src/ /app/
 RUN javac *.java
