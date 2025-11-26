@@ -1,11 +1,11 @@
+//DONT DELETE THIS YET BUT ITS PROBABLY GOING TO BE DELETED LATER
 
-public class Assignment {
-
+public class AssignmentOLD {
     private String name;
     private double points;
     private int weight;
 
-    public Assignment(String name, double points, int weight) {
+    public AssignmentOLD(String name, double points, int weight) {
         this.name = name;
         this.points = points;
         this.weight = weight;
@@ -21,11 +21,5 @@ public class Assignment {
 
     public int getWeight() {
         return weight;
-    }
-
-    public void printInfo() {
-        System.out.println("Assignment: " + name +
-                " | Points: " + points +
-                " | Weight: " + weight);
     }
 }
