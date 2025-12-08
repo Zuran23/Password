@@ -1,17 +1,45 @@
-Project Requirements: Password Validator
-
+Project Requirements: Assigment Checker
 Pseudocode:
 
-Print: “enter your password”
-Scanner
+START PROGRAM
 
-Check input for character length (if <8, print “Password does not meet the required conditions”)
+CREATE GradeBook object gradeBook
 
-Check password for digit (0-9) (if none, print “Password does not meet the required conditions”)
+LOOP forever:
+    DISPLAY menu options:
+        1. Add assignment
+        2. View assignments
+        3. View average
+        4. Exit
 
-Check password for special character (!@#$%^&*()_+-=[]{};:'"|,.<>?/) (if none, print “Password does not meet the required conditions”)
+    READ userChoice
 
-Else print "password is strong”
+    IF userChoice == 1:
+        PROMPT "Enter assignment name"
+        READ name
+        PROMPT "Enter grade"
+        READ grade
+        CREATE Assignment object with (name, grade)
+        CALL gradeBook.addAssignment(assignment)
+
+    ELSE IF userChoice == 2:
+        CALL gradeBook.displayAssignments()
+
+    ELSE IF userChoice == 3:
+        average = CALL gradeBook.calculateAverage()
+        DISPLAY average
+
+    ELSE IF userChoice == 4:
+        DISPLAY "Goodbye!"
+        BREAK loop
+
+    ELSE:
+        DISPLAY "Invalid option. Try again."
+
+END LOOP
+
+END PROGRAM
+
 
 JavaDocs were added to this project to clearly describe the purpose of each class, method, and important variable. These comments help explain how the program works and make the code easier for us and others to understand.
 
