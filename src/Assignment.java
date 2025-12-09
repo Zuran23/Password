@@ -3,7 +3,7 @@ public class Assignment extends SchoolItem {
 
     private double points;
     private int weight;
-
+//variables for grade points
     public Assignment(String name, double points, int weight) {
         super(name);
         this.points = points;
