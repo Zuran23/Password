@@ -5,7 +5,7 @@ public class GradeBook {
     private int count = 0;
 
     public static int totalAssignmentsAdded = 0;
-
+//count number of assignments
     public static void printTotalAssignments() {
         System.out.println("Total assignments added: " + totalAssignmentsAdded);
     }
@@ -23,7 +23,7 @@ public class GradeBook {
     public boolean hasNoAssignments() {
         return count == 0;
     }
-
+//add up total points earned across assignments
     public double getTotalPoints() {
         double total = 0;
         for (int i = 0; i < count; i++) {
@@ -31,7 +31,7 @@ public class GradeBook {
         }
         return total;
     }
-
+//add up total points available across assignments
     public int getTotalWeight() {
         int sum = 0;
         for (int i = 0; i < count; i++) {
@@ -39,14 +39,14 @@ public class GradeBook {
         }
         return sum;
     }
-
+//calculate weighted grade
     public double getWeightedGrade() {
         if (count == 0) return 0;
 
         double raw = (getTotalPoints() / getTotalWeight()) * 100;
         return Math.round(raw * 100) / 100.0;
     }
-
+//identify letter grade based on percentage
     public String getLetterGrade() {
         double grade = getWeightedGrade();
 

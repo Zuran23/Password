@@ -1,4 +1,5 @@
 //Group5
+//inheritence for assignment file, making name variable
 public abstract class SchoolItem {
     protected String name;
 

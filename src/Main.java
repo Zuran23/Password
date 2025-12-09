@@ -3,13 +3,13 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-
+//add scanner
     private static Scanner scanner = new Scanner(System.in);
 
     private static final int DEFAULT_WEIGHT = 10;
 
     public static void main(String[] args) {
-
+//option selection loop
         GradeBook gradeBook = new GradeBook();
         boolean loop = true;
 
@@ -33,6 +33,7 @@ public class Main {
                     break;
 
                 default:
+                    //if something other than 0-2, display error
                     System.out.println("Invalid option. Try again.");
                     System.out.println("--------------------------------------------");
             }
@@ -55,6 +56,7 @@ public class Main {
         int weight = getIntInput("Assignment weight (pts): ");
 
         if (grade < 0 || weight <= 0) {
+            //error if grade value is zero or negative
             System.out.println("Error: Invalid grade or weight.");
             return;
         }
