@@ -18,20 +18,24 @@ public class Main {
             int option = getIntInput("Choose an option: ");
 
             switch (option) {
+                    //This will display the grade of the class
                 case 1:
                     displayCurrentGrade(gradeBook);
                     break;
 
                 case 2:
+                    //You add your assignment for the class
                     handleAddAssignment(gradeBook);
                     break;
 
+                    //Exit the program
                 case 0:
                     System.out.println("Exiting. Goodbye!");
                     GradeBook.printTotalAssignments();
                     loop = false;
                     break;
 
+                    //If you chose any option beyond 0,1,2
                 default:
                     System.out.println("Invalid option. Try again.");
                     System.out.println("--------------------------------------------");
@@ -39,6 +43,7 @@ public class Main {
         }
     }
 
+    //Display Menu
     private static void printMenu() {
         System.out.println("Welcome to the Student Grade Calculator!");
         System.out.println("0. Exit");
@@ -54,6 +59,7 @@ public class Main {
         double grade = getDoubleInput("Assignment grade (pts): ");
         int weight = getIntInput("Assignment weight (pts): ");
 
+        //Error check if you enter 0 or below for grade or the weight
         if (grade < 0 || weight <= 0) {
             System.out.println("Error: Invalid grade or weight.");
             return;
@@ -66,6 +72,7 @@ public class Main {
         displayCurrentGrade(gradeBook);
     }
 
+    //Error check if you chose 1 without adding any grades
     private static void displayCurrentGrade(GradeBook gradeBook) {
         if (gradeBook.hasNoAssignments()) {
             System.out.println("Invalid operation. No grades have yet been entered.");
@@ -73,6 +80,7 @@ public class Main {
             return;
         }
 
+        //Display Current Grade in the class
         System.out.printf("Current grade: %.2f%% (%s)",
                 gradeBook.getWeightedGrade(),
                 gradeBook.getLetterGrade());
@@ -80,6 +88,7 @@ public class Main {
         System.out.println("--------------------------------------------");
     }
 
+    //Random Messages of encouragement
     private static void displayRandomMessage() {
         String[] messages = {
                 "Nice work!",
