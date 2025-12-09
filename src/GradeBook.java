@@ -10,6 +10,7 @@ public class GradeBook {
         System.out.println("Total assignments added: " + totalAssignmentsAdded);
     }
 
+    //Each new loop we can add new assignment information
     public void addAssignment(String name, double points, int weight) {
         assignments[count] = new Assignment(name, points, weight);
         count++;
