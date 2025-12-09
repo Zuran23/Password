@@ -15,15 +15,18 @@ public class GradeBook {
         count++;
         totalAssignmentsAdded++;
     }
-
+//All the assignment information
+    
     public void addAssignment(String name, double points) {
         addAssignment(name, points, 10);
     }
 
+    //A boolean for if 1 is chosen before 2. 
     public boolean hasNoAssignments() {
         return count == 0;
     }
 
+    //It will calculate the total points of all assignments
     public double getTotalPoints() {
         double total = 0;
         for (int i = 0; i < count; i++) {
@@ -32,6 +35,7 @@ public class GradeBook {
         return total;
     }
 
+    //To calculate the total weight of all the assignments
     public int getTotalWeight() {
         int sum = 0;
         for (int i = 0; i < count; i++) {
@@ -40,6 +44,7 @@ public class GradeBook {
         return sum;
     }
 
+    //The weighted grade after getting the point and the weight for each of these assignments
     public double getWeightedGrade() {
         if (count == 0) return 0;
 
@@ -47,6 +52,7 @@ public class GradeBook {
         return Math.round(raw * 100) / 100.0;
     }
 
+    //It will check the number and match the letter to it. 
     public String getLetterGrade() {
         double grade = getWeightedGrade();
 
